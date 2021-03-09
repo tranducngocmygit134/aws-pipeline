@@ -1,5 +1,5 @@
-import React, { useReducer } from "react";
-import styled from "styled-components";
+import React, { useReducer } from 'react';
+import styled from 'styled-components';
 
 const Button = styled.button`
   appearance: none;
@@ -43,10 +43,12 @@ const Counter = () => {
     <div>
       <CounterValue data-testid="counter-value">Count: {counter}</CounterValue>
       <ButtonRow>
+        <Button onClick={() => dispatch(-3)}>-3</Button>
         <Button onClick={() => dispatch(-2)}>-2</Button>
         <Button onClick={() => dispatch(-1)}>-1</Button>
         <Button onClick={() => dispatch(1)}>+1</Button>
         <Button onClick={() => dispatch(2)}>+2</Button>
+        <Button onClick={() => dispatch(3)}>+3</Button>
       </ButtonRow>
     </div>
   );
